@@ -1,6 +1,6 @@
 # Telegram CIDR
 
-[![ddns](https://img.shields.io/badge/LICENSE-BSD3%20Clause%20Liscense-lightblue?style=flat-square)](https://github.com/fernvenue/telegram-cidr-list/-/raw/master/LICENSE)
+[![ddns](https://img.shields.io/badge/LICENSE-BSD3%20Clause%20Liscense-lightblue?style=flat-square)](https://raw.githubusercontent.com/fernvenue/telegram-cidr-list/master/LICENSE)
 
 ## Details
 
