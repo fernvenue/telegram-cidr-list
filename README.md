@@ -1,6 +1,6 @@
-# Telegram CIDR
+# Telegram CIDR list
 
-[![ddns](https://img.shields.io/badge/LICENSE-BSD3%20Clause%20Liscense-brightgreen?style=flat-square)](./LICENSE)
+[![telegram-cidr-list](https://img.shields.io/badge/LICENSE-BSD3%20Clause%20Liscense-blue?style=flat-square)](./LICENSE)
 
 ## Details
 
