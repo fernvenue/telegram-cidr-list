@@ -17,7 +17,6 @@ sed -i "s|$|&'|g" ./CIDR.yaml
 sed -i "1s|^|payload:\n|" ./CIDR.yaml
 cp ./CIDR.txt ./CIDR.conf
 sed -i "s|^|IP-CIDR,|g" ./CIDR.conf
-sed -i "/:/ s/IP-CIDR/IP-CIDR6/" ./CIDR.conf
 git init
 git add .
 git commit -m 'Update CIDR list'
