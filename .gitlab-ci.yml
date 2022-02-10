@@ -1,0 +1,6 @@
+update:
+  stage: deploy
+  script:
+    - curl 'https://gitlab.com/fernvenue/telegram-cidr-list/-/raw/master/updater.sh' -o ./updater.sh
+    - chmod +x ./updater.sh
+    - ./updater.sh
