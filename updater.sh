@@ -18,12 +18,6 @@ sed -i "1s|^|payload:\n|" ./CIDR.yaml
 cp ./CIDR.txt ./CIDR.conf
 sed -i "s|^|IP-CIDR,|g" ./CIDR.conf
 updated=`date --rfc-3339 sec`
-sed -i "1{x;p;x;}" ./CIDR*
-sed -i "1i # GitHub: https://github.com/fernvenue/telegram-cidr-list" ./CIDR*
-sed -i "1i # GitLab: https://gitlab.com/fernvenue/telegram-cidr-list" ./CIDR*
-sed -i "1i # Updated: $updated" ./CIDR*
-sed -i "1i # License: BSD-3-Clause License" ./CIDR*
-sed -i "1i # Telegram CIDR list" ./CIDR*
 git init
 git add .
 git commit -m "$updated"
