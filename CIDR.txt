@@ -1,6 +1,6 @@
 # Telegram CIDR list
 # License: BSD-3-Clause License
-# Updated: 2022-02-26 10:17:41+00:00
+# Updated: 2022-02-26 10:17:54+00:00
 # GitLab: https://gitlab.com/fernvenue/telegram-cidr-list
 # GitHub: https://github.com/fernvenue/telegram-cidr-list
 
