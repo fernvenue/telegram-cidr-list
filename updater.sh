@@ -19,7 +19,7 @@ cp ./CIDR.txt ./CIDR.conf
 sed -i "s|^|IP-CIDR,|g" ./CIDR.conf
 cat ./CIDR.txt | grep -v ":" > ./CIDRv4.txt
 cat ./CIDR.conf | grep -v ":" > ./CIDRv4.conf
-cat ./CIDR.yaml | grep -v ":" | sed -i "1s|^|payload:\n|" > ./CIDRv4.yaml
+cat ./CIDR.yaml | grep -v ":" | sed "1s|^|payload:\n|" > ./CIDRv4.yaml
 updated=`date --rfc-3339 sec`
 git init
 git add .
