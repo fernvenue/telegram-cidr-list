@@ -7,5 +7,5 @@
 **Multi-format secondary distribution of Telegram CIDR list.**
 
 Using [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) to automatically check and update, each inspection is within **1 DAY**.  
-Main repository is at [GitLab](https://gitlab.com/fernvenue/telegram-cidr-list), mirrored at [GitHub](https://github.com/fernvenue/telegram-cidr-list). Support IPv4 and IPv6.  
-Source data from [Telegram Core](https://core.telegram.org/resources/cidr.txt).
+Both [GitLab](https://gitlab.com/fernvenue/telegram-cidr-list) and [GitHub](https://github.com/fernvenue/telegram-cidr-list) mirror each other, PRs and issues are welcome on either side.  
+Source data from [Telegram Core](https://core.telegram.org/resources/cidr.txt), support IPv4 and IPv6.
