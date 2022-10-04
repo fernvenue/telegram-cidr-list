@@ -1,0 +1,22 @@
+stages:
+  - update
+
+update:
+  stage: update
+  script:
+    - git clone https://gitlab.com/$GIT_NAME/telegram-cidr-list.git && cd telegram-cidr-list && rm CIDR*
+    - curl -s "https://core.telegram.org/resources/cidr.txt" | sed "s/[[:space:]]//g" > CIDR.txt
+    - cp CIDR.txt CIDR.conf && sed -i "s|^|IP-CIDR,|g" CIDR.conf
+    - cp CIDR.txt CIDR.yaml && sed -i -e "s|^|  - '&|g" -e "s|$|&'|g" -e "1s|^|payload:\n|" CIDR.yaml
+    - grep -v ":" CIDR.txt > CIDRv4.txt && grep -v ":" CIDR.conf > CIDRv4.conf
+    - grep -v ":" CIDR.yaml | sed "1s|^|payload:\n|" > CIDRv4.yaml
+    - grep ":" CIDR.txt > CIDRv6.txt && grep ":" CIDR.conf > CIDRv6.conf
+    - grep ":" CIDR.yaml | sed "1s|^|payload:\n|" > CIDRv6.yaml
+    - if test -z `git status -s`; then exit 0; fi
+    - date=`date --rfc-3339 sec`
+    - git config --global user.email $GIT_EMAIL
+    - git config --global user.name $GIT_NAME
+    - git init
+    - git add .
+    - git commit -m "$date"
+    - git push https://gitlab-ci:$GIT_TOKEN@gitlab.com/$GIT_NAME/telegram-cidr-list.git master
