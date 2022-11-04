@@ -11,7 +11,7 @@ update:
     - grep -v ":" CIDR.txt > CIDRv4.txt && grep -v ":" CIDR.conf > CIDRv4.conf
     - grep -v ":" CIDR.yaml | sed "1s|^|payload:\n|" > CIDRv4.yaml
     - grep ":" CIDR.txt > CIDRv6.txt && grep ":" CIDR.conf > CIDRv6.conf
-    - grep ":" CIDR.yaml | sed "1s|^|payload:\n|" > CIDRv6.yaml
+    - grep ":" CIDR.yaml > CIDRv6.yaml
     - if test -z `git status -s`; then exit 0; fi
     - date=`date --rfc-3339 sec`
     - git config --global user.email $GIT_EMAIL
