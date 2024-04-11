@@ -16,6 +16,7 @@ update:
     - grep ":" CIDR.yaml > CIDRv6.yaml
     - if test -z `git status -s`; then exit 0; fi
     - date=`date --rfc-3339 sec`
+    - echo "*The last check was conducted at $date.*" >> README.md
     - git config --global user.email $GIT_EMAIL
     - git config --global user.name $GIT_NAME
     - git init
