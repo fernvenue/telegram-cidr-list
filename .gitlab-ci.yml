@@ -3,6 +3,8 @@ stages:
 
 update:
   stage: update
+  only:
+    - triggers
   script:
     - git clone https://gitlab.com/$GIT_NAME/telegram-cidr-list.git && cd telegram-cidr-list && rm CIDR*
     - curl -s "https://core.telegram.org/resources/cidr.txt" | sed "s/[[:space:]]//g" > CIDR.txt
