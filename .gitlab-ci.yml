@@ -16,6 +16,7 @@ update:
     - grep ":" CIDR.txt > CIDRv6.txt && grep ":" CIDR.conf > CIDRv6.conf
     - grep ":" CIDR.yaml > CIDRv6.yaml
     - date=`date --rfc-3339 sec`
+    - sed -i '$ d' README.md
     - echo "*The last check was conducted at $date.*" >> README.md
     - git config --global user.email $GIT_EMAIL
     - git config --global user.name $GIT_NAME
